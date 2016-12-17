@@ -62,8 +62,8 @@ body {
     transform-origin: 100%;
     /* because divs are blocks and start from left to right, the clock by default does not start at 12 o'clock. It is starting at 9. So here we are rotating the default by 90deg. That takes us to 12 o'clock. */
     transform: rotate(90deg);
-    /* now when we rotate, it the hand will transition itself, and that will be every second it will tick itself around */
-    transition: all 0.05s;
+    /* now when we rotate, it the hand will transition itself, and that will be every second it will tick itself around. Had to increase the transition speed to 0.03s from 0.05s. Otherwise transition of the minute hand was toojerky, and even looked like it was going backwards a bit when the second hand was crossing the 12 mark. */
+    transition: all 0.03s;
     /* gives us a snappy little tick tick tick. Going back and forth. Gives realistic ticking feature. */
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
