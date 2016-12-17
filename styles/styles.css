@@ -3,57 +3,76 @@
     margin: 0;
     padding: 0;
 }
+
 html {
     background: url(/images/b9d53799fe5543baaf9452c50b26c3d8.jpg);
     background-size: cover;
     font-family: 'helvetica neue';
+    /* keeps everything on page centered */
     text-align: center;
     font-size: 10px;
 }
-body {
-    font-size: 2rem;
-}
- a {
-     color: black;
- }
 
- a:hover {
-     text-decoration: none;
-     color: #ffc600;
- }
-
-.Site {
+body, .Site {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
     align-items: center;
 }
 
-.Site-content {
+body, .Site-content {
     flex: 1;
 }
 
-.clock {
+body {
+    font-size: 2rem;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc600;
+}
+
+.Site {
+    flex-direction: column;
+}
+
+.clock, .clock-face {
     position: relative;
-    width: 30rem;
-    height: 30rem;
+}
+
+.clock:after, .hand, .diallines {
+    position: absolute;
+}
+
+.clock:after, .hand {
+    top: 50%;
+}
+
+.clock:after, .diallines {
+    left: 50%;
+}
+
+.clock:after, .clock-face {
+    border-radius: 50%;
+}
+
+.clock {
+    width: 33rem;
+    height: 33rem;
     border: 20px solid #c1cdcd;
     border-radius: 50%;
-    margin: 30vh auto;
+    margin: 25vh auto;
     padding: 2rem;
-    box-shadow: 0 0 0px 4px rgba(0,0,0,0.1),
-        inset 0 0 0 3px gray,
-        inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 0px 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px gray, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .clock:after {
     background: red;
-    border-radius: 50%;
     content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -61,22 +80,20 @@ body {
     height: 5%;
     z-index: 1;
 }
+
 .clock-face {
-    position: relative;
     height: 100%;
     width: 100%;
-    border-radius: 50%;
     /* account for the height of the clock hands */
     -webkit-transform: translateY(-3px);
     -moz-transform: translateY(-3px);
     transform: translateY(-3px);
 }
+
 .hand {
     width: 50%;
     height: 6px;
     background: black;
-    position: absolute;
-    top: 50%;
     /* origin is where the hand is going to do the rotation. so 100% means that it will rotate from the end located at the center of the circle instead of from the middle of the hand as is the default (50%). This is along the x axis. Puts pivot point at the very right hand side. */
     -webkit-transform-origin: 100%;
     -moz-transform-origin: 100%;
@@ -93,14 +110,24 @@ body {
 }
 
 .hour-hand {
-    width: 35%;
-    left: 33px;
+    width: 30%;
+    left: 50px;
 }
 
 .second-hand {
     background: red;
     height: 2px;
     transform: translateY(-7px);
+}
+
+.diallines {
+    width: 2px;
+    height: 15px;
+    background: #666;
+    top: -5%;
+    margin-left: -1px;
+    transform-origin: 50% 141px;
+    visibility: hidden;
 }
 
 .footer {

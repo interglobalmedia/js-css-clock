@@ -8,4 +8,6 @@ If I really wanted to make things work properly and not worry about which prefix
 
  A great resource I came across regarding CSS Animations and specifically clocks as well, is https://cssanimation.rocks/clocks/. It thoroughly explained the out of sync issue regarding the second and minute hands and pointed out the transform cross-browser issue.
 
- Note: The time reflects the local time of wherever Github's server is. For me, it is behind by two hours. My local development server reflects my location's correct time. Have to look into how to fix this.
+Note: With my original code, the hour hand only advanced once an hour. However, in the real world, the hour hand advances 6 degrees a minute. Today (12.17.16) I added a hack that took care of that.
+
+If done properly, this challenge was more complicated than it at first seemed. Thanks to WesBos for giving us the leeway to solve it on our own!
