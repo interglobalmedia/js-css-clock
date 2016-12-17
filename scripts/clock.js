@@ -19,5 +19,9 @@ function setDate() {
     const hoursDegrees = ((hours / 12) * 360) + 90;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
     console.log(hours);
+    // check to see if the hand is the minutes hand, and if so, sets a data attribute with the current degree of the seconds hand. This fixes the tendency for the second hand to jump several seconds when crossing the 12 mark. It smooths the rotation of the second hand in relation to the rotation of the minute hand.
+    if(minHand === 'minutes') {
+        minHand.parentNode.setAttribute('data-second-deg', secondHand.secondsDegrees);
+    }
 }
 setInterval(setDate, 1000);
