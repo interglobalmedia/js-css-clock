@@ -39,8 +39,6 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 5%;
     height: 5%;
@@ -52,8 +50,6 @@ body {
     width: 100%;
     border-radius: 50%;
     /* account for the height of the clock hands */
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
     transform: translateY(-3px);
 }
 .hand {
@@ -64,16 +60,12 @@ body {
     top: 50%;
     /* origin is where the hand is going to do the rotation. so 100% means that it will rotate from the end located at the center of the circle instead of from the middle of the hand as is the default (50%). This is along the x axis. Puts pivot point at the very right hand side. */
     -webkit-transform-origin: 100%;
-    -moz-transform-origin: 100%;
     transform-origin: 100%;
     /* because divs are blocks and start from left to right, the clock by default does not start at 12 o'clock. It is starting at 9. So here we are rotating the default by 90deg. That takes us to 12 o'clock. */
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     transform: rotate(90deg);
-    /* now when we rotate, it the hand will transition itself, and that will be every second it will tick itself around. Had to increase the transition speed to 0.03s from 0.05s. Otherwise transition of the minute hand was toojerky, and even looked like it was going backwards a bit when the second hand was crossing the 12 mark. For FireFox, I changed it back to 0.05s, because 0.03s was too jerky and the minute hand even moved backwards a bit. */
-    -webkit-transition: all 0.03s;
-    -moz-transition: all 0.05s;
-    transition: all 0.03s;
+    /* Removed 'transition: all 0.03s' because it caused the second hand to go backwards. */
     /* gives us a snappy little tick tick tick. Going back and forth. Gives realistic ticking feature. */
     -webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     -moz-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
@@ -83,13 +75,6 @@ body {
 .hour-hand {
     width: 35%;
     left: 33px;
-}
-
-.hour-hand:before {
-    height: 2%;
-    width: 2%;
-    background: pink;
-    z-index: 2;
 }
 
 .second-hand {
