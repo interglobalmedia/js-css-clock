@@ -12,10 +12,25 @@ html {
 }
 body {
     font-size: 2rem;
+}
+ a {
+     color: black;
+ }
+
+ a:hover {
+     text-decoration: none;
+     color: #ffc600;
+ }
+
+.Site {
     display: flex;
-    flex: 1;
     min-height: 100vh;
+    flex-direction: column;
     align-items: center;
+}
+
+.Site-content {
+    flex: 1;
 }
 
 .clock {
@@ -24,7 +39,7 @@ body {
     height: 30rem;
     border: 20px solid #c1cdcd;
     border-radius: 50%;
-    margin: 50px auto;
+    margin: 30vh auto;
     padding: 2rem;
     box-shadow: 0 0 0px 4px rgba(0,0,0,0.1),
         inset 0 0 0 3px gray,
@@ -39,6 +54,8 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 5%;
     height: 5%;
@@ -50,6 +67,8 @@ body {
     width: 100%;
     border-radius: 50%;
     /* account for the height of the clock hands */
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
     transform: translateY(-3px);
 }
 .hand {
@@ -60,6 +79,7 @@ body {
     top: 50%;
     /* origin is where the hand is going to do the rotation. so 100% means that it will rotate from the end located at the center of the circle instead of from the middle of the hand as is the default (50%). This is along the x axis. Puts pivot point at the very right hand side. */
     -webkit-transform-origin: 100%;
+    -moz-transform-origin: 100%;
     transform-origin: 100%;
     /* because divs are blocks and start from left to right, the clock by default does not start at 12 o'clock. It is starting at 9. So here we are rotating the default by 90deg. That takes us to 12 o'clock. */
     -webkit-transform: rotate(90deg);
@@ -81,4 +101,10 @@ body {
     background: red;
     height: 2px;
     transform: translateY(-7px);
+}
+
+.footer {
+    font-family: 'Roboto Slab', serif;
+    min-height: 50px;
+    letter-spacing: 0.1em;
 }
