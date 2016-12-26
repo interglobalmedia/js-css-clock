@@ -16,12 +16,6 @@ function setDate() {
     secondHand.style.mozTransform = `rotate(${secondsDegrees}deg)`;
     secondHand.style.webkitTransform = `rotate(${secondsDegrees}deg)`;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-    // when second hand crosses 12 mark turn off transition property otherwise turn it on
-    if (secondsDegrees === 90) {
-        secondHand.style.transition = 'all 0.0s';
-    }   else {
-        secondHand.style.transition = 'all 0.5s';
-    }
 
     const minutes = now.getMinutes();
     const minHand = document.querySelector('.min-hand');
