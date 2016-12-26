@@ -5,7 +5,7 @@ for (let i = 1; i < 60; i++) {
     clockEl.innerHTML += "<div class='diallines'></div>";
     dialLines[i].style.transform = "rotate(" + 6 * i + "deg)";
 }
-function setDate() {
+export function setDate() {
     // get time
     const now = new Date();
     const seconds = now.getSeconds();

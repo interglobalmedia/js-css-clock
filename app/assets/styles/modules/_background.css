@@ -1,0 +1,26 @@
+html {
+    background: url(../../assets/images/b9d53799fe5543baaf9452c50b26c3d8.jpg);
+    background-size: cover;
+    font-family: 'helvetica neue';
+    /* keeps everything on page centered */
+    text-align: center;
+    font-size: 10px;
+}
+
+body, .Site {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+}
+
+body, .Site-content {
+    flex: 1;
+}
+
+body {
+    font-size: 2rem;
+}
+
+.Site {
+    flex-direction: column;
+}

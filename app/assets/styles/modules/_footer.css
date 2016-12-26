@@ -1,0 +1,10 @@
+.footer {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    min-height: 50px;
+    letter-spacing: 0.1em;
+    @media all and (min-width: 480px) {
+        font-size: 2.5rem;
+        min-height: 60px;
+    }
+}
