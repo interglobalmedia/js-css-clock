@@ -16,6 +16,11 @@ function setDate() {
     secondHand.style.mozTransform = `rotate(${secondsDegrees}deg)`;
     secondHand.style.webkitTransform = `rotate(${secondsDegrees}deg)`;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    if (secondsDegrees === 90) {
+        secondHand.style.transition = 'all 0.0s';
+    } else {
+        secondHand.style.transition = 'all 0.05s';
+    }
 
     const minutes = now.getMinutes();
     const minHand = document.querySelector('.min-hand');
