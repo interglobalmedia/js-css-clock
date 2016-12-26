@@ -23,7 +23,7 @@
     height: 300px;
     border: 15px solid #c1cdcd;
     border-radius: 50%;
-    margin: 25% auto 0;
+    margin: 40% auto 0;
     padding: 2rem;
     box-shadow: 0 0 0px 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px gray, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
     @media all and (min-width: 480px) {
