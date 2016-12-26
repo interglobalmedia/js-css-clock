@@ -532,8 +532,8 @@ body {
 }
 
 .clock {
-    width: 300px;
-    height: 300px;
+    width: 26.75rem;
+    height: 26.75rem;
     border: 15px solid #c1cdcd;
     border-radius: 50%;
     margin: 40% auto 0;
@@ -544,8 +544,8 @@ body {
 @media all and (min-width: 480px) {
 
   .clock {
-    width: 400px;
-    height: 400px;
+    width: 36rem;
+    height: 36rem;
     border: 20px solid #c1cdcd;
   }
 }
@@ -578,7 +578,7 @@ body {
 
 .hand {
     width: 50%;
-    height: 6px;
+    height: 7px;
     background: black;
     /* origin is where the hand is going to do the rotation. so 100% means that it will rotate from the end located at the center of the circle instead of from the middle of the hand as is the default (50%). This is along the x axis. Puts pivot point at the very right hand side. */
     -webkit-transform-origin: 100%;
@@ -594,7 +594,7 @@ body {
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
-@media all  and (min-width: 480px) {
+@media screen and (min-width: 480px) {
 
   .hand {
     height: 10px;
@@ -603,13 +603,20 @@ body {
 
 .hour-hand {
     width: 30%;
+    left: 19%;
+}
+
+@media all and (min-width: 480px) {
+
+  .hour-hand {
     left: 20%;
+  }
 }
 
 .second-hand {
     background: red;
     height: 1px;
-    margin-top: 8px;
+    margin-top: 5px;
     -webkit-transform: translateY(-7px);
             transform: translateY(-7px);
 }
@@ -618,6 +625,7 @@ body {
 
   .second-hand {
     height: 2px;
+    margin-top: 6px;
   }
 }
 
