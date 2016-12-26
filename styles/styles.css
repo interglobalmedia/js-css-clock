@@ -102,8 +102,6 @@ a:hover {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     transform: rotate(90deg);
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
     /* remove transition: all 0.5s again. I think it causes problems remotely. Let's see what happens.
     /* gives us a snappy little tick tick tick. Going back and forth. Gives realistic ticking feature. */
     -webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
