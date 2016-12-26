@@ -65,7 +65,7 @@ a:hover {
     height: 33rem;
     border: 20px solid #c1cdcd;
     border-radius: 50%;
-    margin: 25vh auto;
+    margin: 24vh auto;
     padding: 2rem;
     box-shadow: 0 0 0px 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px gray, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -102,7 +102,7 @@ a:hover {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     transform: rotate(90deg);
-    /* Removed 'transition: all 0.03s' because it caused the second hand to go backwards. */
+    transition: all 0.5s;
     /* gives us a snappy little tick tick tick. Going back and forth. Gives realistic ticking feature. */
     -webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     -moz-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
