@@ -534,7 +534,7 @@ body {
 .clock {
     width: 36rem;
     height: 36rem;
-    border: 15px solid #c1cdcd;
+    border: 20px solid #c1cdcd;
     border-radius: 50%;
     margin: 40% auto 0;
     padding: 2rem;
