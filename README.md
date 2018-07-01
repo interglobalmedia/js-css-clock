@@ -13,3 +13,5 @@
 **Note:** With my original code, the hour hand only advanced once an hour. However, in the real world, the hour hand advances 6 degrees a minute. Today (12.17.16) I added a hack that took care of that.
 
 [js-css-clock](https://interglobalmedia.github.io/js-css-clock/) on **Github gh-pages**
+
+[js css clock articulation](https://interglobalmedia.github.io/portfolio/#/work/js-css-clock)
